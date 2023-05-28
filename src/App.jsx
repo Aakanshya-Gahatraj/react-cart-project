@@ -35,7 +35,7 @@ function App() {
     let newProdList = [...productList];
     let newTotal = totalAmount;
     newProdList[i].quantity > 0 ? newProdList[i].quantity-- : "";
-    newTotal -= newProdList[i].price;
+    newTotal > 0 ? (newTotal -= newProdList[i].price) : "";
     setProductList(newProdList);
     setTotalAmount(newTotal);
   }
